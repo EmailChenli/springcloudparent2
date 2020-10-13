@@ -1,7 +1,7 @@
 package com.example.cloudpay8001.conntroller;
 
-import com.example.cloudpay8001.entity.CommonResult;
-import com.example.cloudpay8001.entity.Payment;
+import com.example.cloudaipcommons.entity.CommonResult;
+import com.example.cloudaipcommons.entity.Payment;
 import com.example.cloudpay8001.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

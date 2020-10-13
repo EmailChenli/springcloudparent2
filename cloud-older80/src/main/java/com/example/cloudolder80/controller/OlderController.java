@@ -1,7 +1,7 @@
 package com.example.cloudolder80.controller;
 
-import com.example.cloudolder80.entity.CommonResult;
-import com.example.cloudolder80.entity.Payment;
+import com.example.cloudaipcommons.entity.CommonResult;
+import com.example.cloudaipcommons.entity.Payment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;

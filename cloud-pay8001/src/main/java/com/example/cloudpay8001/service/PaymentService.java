@@ -1,7 +1,6 @@
 package com.example.cloudpay8001.service;
 
-import com.example.cloudpay8001.entity.Payment;
-import org.springframework.stereotype.Service;
+import com.example.cloudaipcommons.entity.Payment;
 
 import java.util.List;
 

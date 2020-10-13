@@ -93,14 +93,51 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
-                    <fork>true</fork>
-                    <addResources>true</addResources>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.2.0.RELEASE</version>
+            </plugin>
         </plugins>
+        <pluginManagement>
+            <!--如果你的项目是一个放置通用工具类的工程，那么该项目中，
+            就不能包括上面这个打包插件，如果你这个工具类工程依赖有父工程，
+            那么父工程中也不能包括该打包插件，只有你的项目是一个web项目时，
+            含有Main方法的程序入口类，要加该打包插件，我放在了父工程的pom文件中，
+            那就是代表了所有子模块都有这个打包插件，
+            所以报错，解决就是去掉这个插件 ，只在web工程中加入这个打包插件！-->
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>2.2.0.RELEASE</version>
+                    <configuration>
+                        <fork>true</fork>
+                        <addResources>true</addResources>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
 </project>
